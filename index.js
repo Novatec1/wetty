@@ -45,14 +45,14 @@ if (require.main === module) {
           demand: false,
           description: 'window title',
           type: 'string',
-          default: process.env.TITLE || 'WeTTy - The Web Terminal Emulator',
+          default: process.env.TITLE || 'WeTTy - Datahub Live Viewer',
         },
         sshauth: {
           demand: false,
           description:
             'defaults to "password", you can use "publickey,password" instead',
           type: 'string',
-          default: process.env.SSHAUTH || 'password',
+          default: process.env.SSHAUTH || 'none',
         },
         sshpass: {
           demand: false,

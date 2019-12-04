@@ -82,7 +82,6 @@ socket.on('connect', () => {
   /*
     term.scrollPort_.screen_.setAttribute('contenteditable', 'false');
   */
-
   term.attachCustomKeyEventHandler(e => {
     // Ctrl + Shift + C
     if (e.ctrlKey && e.shiftKey && e.keyCode === 67) {
@@ -98,7 +97,7 @@ socket.on('connect', () => {
     if (term.hasSelection()) 
       copyToClipboard(term.getSelection())
   }, false);
-
+  
   function resize(): void {
     fit(term);
     socket.emit('resize', {
